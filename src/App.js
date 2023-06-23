@@ -8,18 +8,9 @@ function App() {
 	const [input, setInput] = useState("");
 	const [itemsArr, setItemsArr] = useState(snacks);
 
-	const columnNameToPropertyName = {
-		ID: "id",
-		"Product Name": "product_name",
-		"Product Weight": "product_weight",
-		"Price(INR)": "price",
-		Calories: "calories",
-		Ingredients: "ingredients",
-	};
-
-	function handleAscendingOrder(event) {
-		const spanText = event.target.previousElementSibling;
-		const sortProperty = columnNameToPropertyName[spanText.textContent];
+	function handleAscendingOrder(sortProperty) {
+		// const spanText = event.target.previousElementSibling;
+		// const sortProperty = columnNameToPropertyName[spanText.textContent];
 
 		if (
 			sortProperty === "product_name" ||
@@ -39,9 +30,9 @@ function App() {
 		}
 	}
 
-	function handleDescendingOrder(event) {
-		const spanText = event.target.previousElementSibling.previousElementSibling;
-		const sortProperty = columnNameToPropertyName[spanText.textContent];
+	function handleDescendingOrder(sortProperty) {
+		// const spanText = event.target.previousElementSibling.previousElementSibling;
+		// const sortProperty = columnNameToPropertyName[spanText.textContent];
 
 		if (
 			sortProperty === "product_name" ||
@@ -69,8 +60,6 @@ function App() {
 		);
 		setItemsArr(() => sortedArr);
 	}
-
-	console.log(itemsArr);
 
 	return (
 		<div className="border-2 border-gray-700 shadow-md p-4 py-9 min-h-[90vh] m-5 shadow-gray-500 rounded-md">

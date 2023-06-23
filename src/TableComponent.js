@@ -18,13 +18,13 @@ const TableComponent = ({
 									<span>ID</span>
 
 									<AiOutlineSortAscending
-										onClick={handleAscendingOrder}
+										onClick={() => handleAscendingOrder("id")}
 										size={20}
 										className="cursor-pointer"
 									/>
 
 									<AiOutlineSortDescending
-										onClick={handleDescendingOrder}
+										onClick={() => handleDescendingOrder("id")}
 										size={20}
 										className="cursor-pointer"
 									/>
@@ -35,13 +35,13 @@ const TableComponent = ({
 									<span>Product Name</span>
 									<AiOutlineSortAscending
 										size={20}
-										onClick={handleAscendingOrder}
+										onClick={() => handleAscendingOrder("product_name")}
 										className="cursor-pointer"
 									/>
 
 									<AiOutlineSortDescending
 										size={20}
-										onClick={handleDescendingOrder}
+										onClick={() => handleDescendingOrder("product_name")}
 										className="cursor-pointer"
 									/>
 								</div>
@@ -52,12 +52,12 @@ const TableComponent = ({
 
 									<AiOutlineSortAscending
 										size={20}
-										onClick={handleAscendingOrder}
+										onClick={() => handleAscendingOrder("product_weight")}
 										className="cursor-pointer"
 									/>
 									<AiOutlineSortDescending
 										size={20}
-										onClick={handleDescendingOrder}
+										onClick={() => handleDescendingOrder("product_weight")}
 										className="cursor-pointer"
 									/>
 								</div>
@@ -68,13 +68,13 @@ const TableComponent = ({
 
 									<AiOutlineSortAscending
 										size={20}
-										onClick={handleAscendingOrder}
+										onClick={() => handleAscendingOrder("price")}
 										className="cursor-pointer"
 									/>
 
 									<AiOutlineSortDescending
 										size={20}
-										onClick={handleDescendingOrder}
+										onClick={() => handleDescendingOrder("price")}
 										className="cursor-pointer"
 									/>
 								</div>
@@ -85,13 +85,13 @@ const TableComponent = ({
 
 									<AiOutlineSortAscending
 										size={20}
-										onClick={handleAscendingOrder}
+										onClick={() => handleAscendingOrder("calories")}
 										className="cursor-pointer"
 									/>
 
 									<AiOutlineSortDescending
 										size={20}
-										onClick={handleDescendingOrder}
+										onClick={() => handleDescendingOrder("calories")}
 										className="cursor-pointer"
 									/>
 								</div>
@@ -102,13 +102,13 @@ const TableComponent = ({
 
 									<AiOutlineSortAscending
 										size={20}
-										onClick={handleAscendingOrder}
+										onClick={() => handleAscendingOrder("ingredients")}
 										className="cursor-pointer"
 									/>
 
 									<AiOutlineSortDescending
 										size={20}
-										onClick={handleDescendingOrder}
+										onClick={() => handleDescendingOrder("ingredients")}
 										className="cursor-pointer"
 									/>
 								</div>
