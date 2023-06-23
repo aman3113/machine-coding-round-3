@@ -15,3 +15,20 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+table,
+th,
+td {
+	border: 1px solid;
+}
+
+td,
+th {
+	text-align: center;
+	padding: 15px;
+}
+
+th {
+	height: 50px;
+	min-width: 150px;
+}
