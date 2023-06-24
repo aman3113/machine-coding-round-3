@@ -9,18 +9,15 @@ function App() {
 	const [itemsArr, setItemsArr] = useState(snacks);
 
 	function handleAscendingOrder(sortProperty) {
-		// const spanText = event.target.previousElementSibling;
-		// const sortProperty = columnNameToPropertyName[spanText.textContent];
-
-		if (
-			sortProperty === "product_name" ||
-			sortProperty === "ingredients" ||
-			sortProperty === "product_weight"
-		) {
-			const sortedArr = [...snacks].sort(
-				(a, b) => a[sortProperty].length - b[sortProperty].length
+		if (sortProperty === "product_name") {
+			const sortedArr = [...snacks].sort((a, b) =>
+				a[sortProperty].localeCompare(b[sortProperty])
 			);
-
+			setItemsArr(() => sortedArr);
+		} else if (sortProperty === "ingredients") {
+			const sortedArr = [...snacks].sort((a, b) =>
+				a[sortProperty][0].localeCompare(b[sortProperty][0])
+			);
 			setItemsArr(() => sortedArr);
 		} else {
 			const sortedArr = [...snacks].sort(
@@ -31,18 +28,15 @@ function App() {
 	}
 
 	function handleDescendingOrder(sortProperty) {
-		// const spanText = event.target.previousElementSibling.previousElementSibling;
-		// const sortProperty = columnNameToPropertyName[spanText.textContent];
-
-		if (
-			sortProperty === "product_name" ||
-			sortProperty === "ingredients" ||
-			sortProperty === "product_weight"
-		) {
-			const sortedArr = [...snacks].sort(
-				(a, b) => b[sortProperty].length - a[sortProperty].length
+		if (sortProperty === "product_name") {
+			const sortedArr = [...snacks].sort((a, b) =>
+				b[sortProperty].localeCompare(a[sortProperty])
 			);
-
+			setItemsArr(() => sortedArr);
+		} else if (sortProperty === "ingredients") {
+			const sortedArr = [...snacks].sort((a, b) =>
+				b[sortProperty][0].localeCompare(a[sortProperty][0])
+			);
 			setItemsArr(() => sortedArr);
 		} else {
 			const sortedArr = [...snacks].sort(
